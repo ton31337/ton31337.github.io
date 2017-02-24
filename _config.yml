@@ -22,7 +22,7 @@ harmony:
   show_disclaimer: true
 
 markdown:    kramdown
-highlighter: pygments 
+highlighter: rouge
 permalink:        pretty
 
 exclude: 
