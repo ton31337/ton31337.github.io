@@ -1,10 +1,10 @@
 # Harmony Jekyll theme general configurations 
 
 # Base URL
-baseurl: /harmony
+baseurl: /
 
 # Site live URL
-url: http://gayan.me
+url: http://ton31337.github.io
 
 # Localhost 
 # url: http://127.0.0.1:4000  
@@ -23,22 +23,18 @@ harmony:
    https://github.com/gayanvirajith/harmony
   basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
   author: # Author details
-    name: Gayan Virajith
+    name: Donatas Abraitis
     email: gayanvirajith@gmail.com
-    url: http://gayanvirajith.github.io
+    url: http://ton31337.github.io
 
   # Google Analytics key, leave blank to ignore
   google_analytics_key: UA-xxxx-x
 
   # Profile links, leave blank to ignore
   social: 
-    github: gayanvirajith
-    twitter: gayanvirajith
-    facebook: gayanvirajith
-    gplus: +GayanVirajith
-    dribble: gayan
-    pinterest: 
-  # Toggle disclaimer in footer
+    github: ton31337
+    twitter: abradona
+    facebook: donatas.abraitis
   show_disclaimer: true
 
 # Conversion / Build settings 
