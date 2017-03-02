@@ -11,6 +11,8 @@ Others use for instance Chef/Puppet/Ansible inventory for discovery, but this is
 
 I tried to think how can we do simpler without having Consul as a backing store for data, consul-template as a rendering engine and any external service for registrations to Consul. The first idea comes to BGP communities. Why not reuse BGP communities as a service, for instance `12345:<port>`. Services announcing /32 (IPv4) or /128 (IPv6) self as a node which could handle `<port>` for service X. Another endpoint listens for incoming BGP updates and parses BGP communities. It will see, that e.g. prefix `2001::123/128` has `12345:443` community and treat it as it handles connections for port 443.
 
+![exa-template](/images/exa-template.png)
+
 #### Generating template
 
 This is the configuration for the ExaBGP process:
