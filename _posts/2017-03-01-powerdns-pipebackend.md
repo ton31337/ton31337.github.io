@@ -43,7 +43,7 @@ As you see a lot of queries respond with false to `getSOA()`. That was not good,
 Q        route-1.000wEBhost.AWex.io        IN        SOA        -1        85.62.233.82
 ```
 
-rAnDOm gENERatEDE qnames, and looks like this is [not handled](https://github.com/PowerDNS/pdns/blob/master/modules/pipebackend/pipebackend.cc#L179) by PowerDNS before sending query to PIPEBackend. It would be great to have a configuration option for PowerDNS like `pipe-lowercase`, but we fixed it quickly by converting to lowercase in [our backend](https://github.com/ton31337/pdns_razor/blob/master/razor.cr#L23).
+rAnDOm gENERatEDE qnames, and looks like this is [not handled](https://github.com/PowerDNS/pdns/blob/master/modules/pipebackend/pipebackend.cc#L179) by PowerDNS before sending query to PIPEBackend. It would be [great to have](https://github.com/PowerDNS/pdns/issues/5088) a configuration option for PowerDNS like `pipe-lowercase`, but we fixed it quickly by converting to lowercase in [our backend](https://github.com/ton31337/pdns_razor/blob/master/razor.cr#L23).
 
 #### Takeaways
 
