@@ -7,6 +7,10 @@ categories:
 
 It's 2017, but I still have to tell people time to time what it is, how it works, what's the benefit comparing with [ancient protocol](https://en.wikipedia.org/wiki/IPv4), how it differs and so on and so forth.
 
+As you see in the picture below IPv6 adoption is getting pace. What does it mean? It means, that more and more devices are connecting to the internet (Internet of Things is trending these days) and they require to be reachable from outside bypassing well-known CG-NAT and other stuff. Even [performance](https://code.facebook.com/posts/1192894270727351/ipv6-it-s-time-to-get-on-board/) is nearly 10-15% better with IPv6, thus there is zero reason why not to start to use IPv6 this right now.
+
+![IPv6 adoption](/images/ipv6-adoption.png)
+
 IPv6 is really matured with a huge address space which requires thinking differently. Hence, the first thing in this "new" protocol is addressing. The rules valid for IPv6 are not valid for IPv6 anymore, thus why do not exploit this capability for other purposes like storing some useful information (state, metadata, etc.) inside address space?
 
 Some ISPs integrates such metadata inside IPv6 address like VLAN, VXLAN, department, building, service, tag, even the port (better to use DNS if IP would be changed in some circumstances) number could be mapped. I remember when we started to implement IPv6 at [Vinted](https://www.vinted.com/) (it was my second IPv6 deployment) we brainstormed what would be the best way to divide this address space to be readable, practical and scalable. First iterations were too much overengineered as usually (too much metadata relied on address itself: service, data center, location). Eventually, this was enumerated the simplest way.
