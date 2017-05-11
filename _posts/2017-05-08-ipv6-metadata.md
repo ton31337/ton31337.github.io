@@ -5,7 +5,9 @@ categories:
 - blog
 ---
 
-It's 2017, but I still have to tell people time to time what it is, how it works, what's the benefit comparing with [ancient protocol](https://en.wikipedia.org/wiki/IPv4), how it differs and so on and so forth.
+It's 2017, but I still have to tell people time to time what it is, how it works, what's the benefit comparing with [ancient protocol](https://en.wikipedia.org/wiki/IPv4), how it differs and so on and so forth. 
+
+Although it has been around for years, it has only been until recently that IPv6 adoption has been gaining pace.
 
 As you see in the picture below IPv6 adoption is getting pace. What does it mean? It means, that more and more devices are connecting to the internet (Internet of Things is trending these days) and they require to be reachable from outside bypassing well-known CG-NAT and other stuff. Even [performance](https://code.facebook.com/posts/1192894270727351/ipv6-it-s-time-to-get-on-board/) is nearly 10-15% better with IPv6, thus there is zero reason why not to start to use IPv6 this right now.
 
@@ -15,7 +17,11 @@ IPv6 is really matured with a huge address space which requires thinking differe
 
 Some ISPs integrates such metadata inside IPv6 address like VLAN, VXLAN, department, building, service, tag, even the port (better to use DNS if IP would be changed in some circumstances) number could be mapped. I remember when we started to implement IPv6 at [Vinted](https://www.vinted.com/) (it was my second IPv6 deployment) we brainstormed what would be the best way to divide this address space to be readable, practical and scalable. First iterations were too much overengineered as usually (too much metadata relied on address itself: service, data center, location). Eventually, this was enumerated the simplest way.
 
-Another one more interesting approach for storing metadata info in IPv6 address is for sharding. For instance, let's do sharding for three [memcached](https://memcached.org/) instances. We have three nodes with appropriate addressing where the last four octets are delegated for `start:end`.
+Another one more interesting approach for storing metadata info in IPv6 address is for sharding.
+
+Sharding helps in cases when you want to spread your data across more than one node. And to keep this information consistent for read/write operations crucial to keep metadata somewhere for the client to know where to send data. You cannot send read requests to random nodes because data is not replicated. This makes IPv6  addresses a suitable place for such metadata.
+
+For instance, let's do sharding for three [memcached](https://memcached.org/) instances. We have three nodes with appropriate addressing where the last four octets are delegated for `start:end`.
 
 ```
 2a02:4780:1:1::0:3e7/64
