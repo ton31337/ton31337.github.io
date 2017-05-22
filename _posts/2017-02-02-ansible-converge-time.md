@@ -80,6 +80,25 @@ Make sure to check if repository file exists or not, because yum downloads this 
 
 Another trick we did, we disabled `update` for git module so that it does not check out the latest version every time, added `creates` option for almost every `unarchive`, `uri`, `shell` modules and so on.
 
+#### Use linting for playbooks
+
+And of course to add some sugar always use [ansible-lint](https://github.com/willthames/ansible-lint). It simplifies development process to keep infrastructure code clean, valid and understandable for everyone. For instance, before linting our playbooks returned such an output:
+
+```
+% ansible-lint *.yml | grep ANSIBLE | sort -rn | uniq -c
+  14 ANSIBLE0016 Tasks that run when changed should likely be handlers
+  46 ANSIBLE0013 Use shell only when shell functionality is required
+  22 ANSIBLE0012 Commands should not change things if nothing needs doing
+   6 ANSIBLE0011 All tasks should be named
+   2 ANSIBLE0010 Package installs should not use latest
+   4 ANSIBLE0009 Octal file permissions must contain leading zero
+   2 ANSIBLE0006 chkconfig used in place of service module
+  10 ANSIBLE0004 Git checkouts must contain explicit version
+   6 ANSIBLE0002 Trailing whitespace
+```
+
+Now we run `ansible-lint` for every pull request. If it fails - we need to fix it before going to merge.
+
 After these changes, our build time dropped to 1 hr 0 min.
 
 ![Ansible deployment](/images/ansible_jenkins_deploy.png)
