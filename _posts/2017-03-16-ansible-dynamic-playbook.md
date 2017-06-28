@@ -20,6 +20,15 @@ This improved build just deploys roles their versions were increased. To have fu
 Here is an example how to manipulate dynamic playbook file:
 
 ```
+require 'redis'
+require 'yaml'
+
+# ansible_deploy.rb must be deployed to `ansible-repo` root directory, like:
+# ansible-repo/
+#   roles/
+#   host_vars/
+#   group_vars/
+#   ansible_deploy.rb
 class AnsibleDeploy
   def initialize(source, destination)
     @source = source
@@ -50,11 +59,11 @@ class AnsibleDeploy
   end
 
   def get_role_version(role)
-    @redis.hmget("ansible:role:#{role}", 'version').first
+    @redis.hmget("ansible:#{@source}:role:#{role}", 'version').first
   end
 
   def update_role_version(role, version)
-    @redis.hmset("ansible:role:#{role}", 'version', version)
+    @redis.hmset("ansible:#{@source}:role:#{role}", 'version', version)
     @run_list[role] = version
   end
 
@@ -98,13 +107,16 @@ class AnsibleDeploy
   end
 end
 
-AnsibleDeploy.new('hostinger.yml', 'hostinger-dynamic.yml').run_list
+source = ARGV[0]
+destination = ARGV[1]
+
+AnsibleDeploy.new(source, destination).run_list
 ```
 
 Build looks like:
 
 ```
-% ruby ./ansible_deploy.rb
+% ruby ./ansible_deploy.rb hostinger.yml hostinger-dynamic.yml
 % ansible-playbook hostinger-dynamic.yml -i hosts
 ```
 
