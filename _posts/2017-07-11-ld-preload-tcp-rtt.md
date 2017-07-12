@@ -68,7 +68,7 @@ To verify if it's working or not just type:
 7fb375726000-7fb375727000 rw-p 00001000 08:01 50341026                   /usr/share/accept.so
 ```
 
-#### Conclusion
+#### Playground
 
 It's always useful to measure performance before/after changes to see if it was worth your time. I used this technique to evaluate the effect before the switch to anycast-based DNS solution. 
 
@@ -76,3 +76,29 @@ But wait, DNS works in UDP mostly ;-) Yes, it works unless data size exceeds 512
 
 * UDP doesn't have 3WHS, which means it's not possible to measure RTT;
 * It would be possible to measure this if clients would use `SO_TIMESTAMP` for sending data and compare at receiving side.
+
+##### Results
+
+```
+# cat /var/log/pdns/rtt.log | python mmhistogram
+Values min:0.00 avg:56.07 med=16.00 max:64000.00 dev:514.34 count:2912957
+Values:
+ value |-------------------------------------------------- count
+     0 |                                                   1087
+     1 |                                                   97
+     2 |                                                   297
+     4 |                                                   955
+     8 |************************************************** 1503390
+    16 |                    ****************************** 908123
+    32 |                                               *** 110458
+    64 |                                         ********* 287174
+   128 |                                                 * 52383
+   256 |                                                   28575
+   512 |                                                   6807
+  1024 |                                                   5729
+  2048 |                                                   3534
+  4096 |                                                   2191
+  8192 |                                                   1430
+ 16384 |                                                   713
+ 32768 |                                                   14
+```
