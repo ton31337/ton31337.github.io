@@ -106,4 +106,5 @@ After these changes, our build time dropped to 1 hr 0 min.
 # Wrapping up
 
 * Always use profiling tools if performance matters;
+* Since v2.0 try to use asynchronous (free) strategy `strategy: free`;
 * Agentless automation tools are slower than agent-based in its nature.
