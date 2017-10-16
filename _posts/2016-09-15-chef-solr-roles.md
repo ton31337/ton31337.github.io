@@ -33,5 +33,11 @@ There you go:
 
 us-imm-prometheus1.xxx.io
 ```
+or using log files:
+```
+% curl "localhost:8983/solr/select?q=content:role__=__imm-leaf" | grep numFound
+% tail -f /var/log/opscode/opscode-solr4/current
+2017-10-09_12:32:06.62128 18061355949 [qtp1725097945-17] INFO  org.apache.solr.core.SolrCore  ? [collection1] webapp=/solr path=/select params={q=content:roles__%3D__imm-leaf&indent=off&start=0&fq=%2BX_CHEF_database_CHEF_X:chef_40be7d3ebda916803709240aad351d14+%2BX_CHEF_type_CHEF_X:node&sort=X_CHEF_id_CHEF_X+asc&rows=1000&wt=json} hits=18 status=0 QTime=2
+```
 
 When you are searching for a node index, `roles` is the key for Solr and roles matches. Solr doesn't always work as expected, thus avoid using `roles` keyword in your custom attributes.
