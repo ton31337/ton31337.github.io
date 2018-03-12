@@ -26,4 +26,4 @@ This time fix was horrible:
 
 I'm just writing this to point myself or other $end_users to do not lost next time if such things happen.
 
-I'm moving to Ubuntu.
+I'm moving to [Ubuntu](https://github.com/ton31337/ansible-desktop).
