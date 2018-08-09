@@ -39,7 +39,7 @@ As always I tried to debug and verify if it's really hits the actual code in the
 
 ```
 stap -e 'probe process("/usr/lib/frr/bgpd").statement("subgroup_default_originate@/root/frr/bgpd/bgp_updgrp_adv.c:720")
-{ rintf("route-map type for default-originate: %d", $bgp->peer_self->rmap_type); }'
+{ printf("route-map type for default-originate: %d", $bgp->peer_self->rmap_type); }'
 
 route-map type for default-originate: 16
 ```
