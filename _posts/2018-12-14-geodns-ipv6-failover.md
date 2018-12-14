@@ -21,7 +21,7 @@ In this blog post, I would like to explain one more interesting approach on how 
 
 ![ipv6-geodns-failover](/images/ipv6-geodns-failover.png)
 
-One global anycast plus region allocated prefix. Both are overlapping prefixes which allow having smooth failover if one region goes down completely. For instance, your GeoDNS server responds to CNAME record with IP _2A02:4780:C1::1_ for the CDN's resolver and at that moment this region is down. New connections will be redirected to the shortest AS-PATH PoP because of global anycast overlapped network.
+One global anycast plus region allocated prefix. Both are overlapping prefixes which allow having smooth failover if one region goes down completely. For instance, your GeoDNS server responds to CNAME record with IP _2A02:4780:C3::1_ for the CDN's resolver and at that moment this region is down. New connections will be redirected to the shortest AS-PATH PoP because of global anycast overlapped network.
 
 This is not for free of course. You should deploy this setup if you care about the infrastructure - it allows you to turn off the whole PoP (or DC) for testing (or Chaos engineering) purposes. Everything you are not testing is breaking.
 
