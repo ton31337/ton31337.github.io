@@ -39,7 +39,7 @@ The second idea came to use consistent hashing with client’s subnet. For IPv4 
     compressed = 8 - ip.split(":").size
     splitted.size.times do |i|
       ip_arr << splitted[i]
-      if splitted[i] == ":" && splitted[i+1] == ":"
+      if splitted[i] == ":" && splitted[i+1]? == ":"
         compressed.times do |_|
           ip_arr << "0" << ":"
         end
