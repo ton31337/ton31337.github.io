@@ -26,7 +26,7 @@ BGP session was UP. That's because we use a single IPv6 session for both IPv4 an
 
 10.0.31.1 is down while 2a02:4780:face:f00d::1 is up. Why? It's for the same reason (packet loss).
 
-Checking for drops/errors with `ethtool -S swp48` gave nothing except that there is a usual drops count which is normal due ACL, buffer congestions, etc.
+Checking for drops/errors with `ethtool -S swp48 | grep -iE "drop|err|disc"` gave nothing except that there is a usual drops count which is normal due ACL, bursty buffer congestions, etc.
 
 If IPv6 works while IPv4 not, it seems related to the ARP table. I double-checked ARP table entries with `ip neigh | wc -l`. It was around 6k. Nothing special as well, just a well-worn node.
 
@@ -46,7 +46,7 @@ Fri Jul 17 08:14:07 UTC 2020
 
 Like from 12k to 9k and varying. The maximum is 16k, but that's not an issue since it's not hitting nearly 16k.
 
-`dmest` is clear. If it would be garbage collection for a stale ARP entries it would be an error message in `dmesg` output, like: `kernel: Neighbour table overflow`.
+`dmesg` is clear. If it would be garbage collection for a stale ARP entries it would be an error message in `dmesg` output, like: `kernel: Neighbour table overflow`.
 
 Just in case I checked `net.ipv4.neigh.default.gc_thresh1` which was a default 128. Like I mentioned above current ARP entries were around 6k.
 
