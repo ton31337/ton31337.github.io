@@ -52,4 +52,9 @@ Just in case I checked `net.ipv4.neigh.default.gc_thresh1` which was a default 1
 
 128 is the maximum number of ARP entries in the cache. Garbage collection won't be triggered if below 128. We have 6k. That's why I noticed a host entries drop when packet loss happens. I double-checked this few times and confirmed.
 
-Changed to gc_thresh1 to 8192 (bigger than we have ARP entries) and the problem just gone.
+Lowered gc_thresh1 to slightly less than we have ARP entries fixed the problem.
+
+If you raise gc_thresh1 higher than you have entries, you will probably gonna have lots of FAILED/STALE entries in the neighbor
+table and fun things could start happening (lots of TCP spurious retransmissions, out of order packets, and so on).
+
+So keep eyes carefully on this ;-)
