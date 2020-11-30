@@ -38,7 +38,7 @@ route-map c1 permit 10
 
 X1 receives paths with communities 65004:2 and 65004:3 from Y1 because those paths are tagged at Y2 and Y3 appropriately.
 
-When X1 sends the best path to C1 it generates duplicate updates because of attribute change (community, 65004:2 -> 65004:3). But since we stip all communities at egress, it's absolutely not necessary sending duplicates towards C1 because the Adj-Rib-Out wasn't changed.
+When X1 sends the best path to C1 it generates duplicate updates because of attribute change (community, 65004:2 -> 65004:3). But since we strip all communities at egress, it's absolutely not necessary sending duplicates towards C1 because the Adj-Rib-Out wasn't changed.
 
 I developed a [patch](https://github.com/FRRouting/frr/pull/7507) for FRRouting, which prevents sending duplicate updates if the path actually not changed. This is valid for all attributes.
 
