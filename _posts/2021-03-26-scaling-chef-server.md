@@ -59,3 +59,58 @@ The traffic to the backend server from frontends dropped by half from ~500mbps t
 #### FIN
 
 I hope this post will be handy for others looking for similar problems.
+
+#### Bonus - frontend config
+
+```
+nginx['enable_ipv6'] = true
+nginx['ssl_certificate'] = '/var/opt/opscode/nginx/ca/donatas.net.crt'
+nginx['ssl_certificate_key'] = '/var/opt/opscode/nginx/ca/donatas.net.key'
+opscode_erchef['depsolver_worker_count'] = 8
+opscode_expander['nodes'] = 8
+opscode_erchef['nginx_bookshelf_caching'] = ':on'
+opscode_erchef['s3_url_expiry_window_size'] = '100%'
+opscode_erchef['db_pool_queue_max'] = 32
+opscode_erchef['db_pooler_timeout'] = 300000
+opscode_erchef['depsolver_pool_queue_max'] = 10
+opscode_erchef['depsolver_pooler_timeout'] = 300000
+opscode_erchef['db_pool_size'] = 16
+opscode_erchef['sql_db_timeout'] = 300000
+oc_bifrost['db_pooler_timeout'] = 300000
+oc_bifrost['db_pool_queue_max'] = 32
+oc_bifrost['db_pool_size'] = 16
+lb['cache_cookbook_files'] = true
+postgresql['vip'] = '127.0.0.1'
+postgresql['port'] = 31337
+
+topology 'tier'
+
+server 'backend1.donatas.net',
+  :ipaddress => 'X.X.X.X',
+  :role => 'backend',
+  :bootstrap => true
+
+backend_vip 'backend1.donatas.net',
+  :ipaddress => 'X.X.X.X,
+  :device => 'ens192'
+
+server 'frontend1.donatas.net',
+  :ipaddress => 'Y.Y.Y.1',
+  :role => 'frontend'
+
+server 'frontend2.donatas.net',
+  :ipaddress => 'Y.Y.Y.2',
+  :role => 'frontend'
+
+server 'frontend3.donatas.net',
+  :ipaddress => 'Y.Y.Y.3',
+  :role => 'frontend'
+
+server 'frontend4.donatas.net',
+  :ipaddress => 'Y.Y.Y.4',
+  :role => 'frontend'
+
+...
+
+api_fqdn 'chef.donatas.net'
+```
