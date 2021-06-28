@@ -76,10 +76,13 @@ opscode_erchef['depsolver_pool_queue_max'] = 10
 opscode_erchef['depsolver_pooler_timeout'] = 300000
 opscode_erchef['db_pool_size'] = 16
 opscode_erchef['sql_db_timeout'] = 300000
+opscode_erchef['authz_timeout'] = 300000
 oc_bifrost['db_pooler_timeout'] = 300000
 oc_bifrost['db_pool_queue_max'] = 32
 oc_bifrost['db_pool_size'] = 16
 lb['cache_cookbook_files'] = true
+lb['redis_connection_timeout'] = 300000
+lb['redis_keepalive_timeout'] = 300000
 postgresql['vip'] = '127.0.0.1'
 postgresql['port'] = 31337
 
