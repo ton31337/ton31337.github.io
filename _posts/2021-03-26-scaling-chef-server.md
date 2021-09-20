@@ -60,6 +60,44 @@ The traffic to the backend server from frontends dropped by half from ~500mbps t
 
 I hope this post will be handy for others looking for similar problems.
 
+#### Bonus - pgpool.conf
+
+```
+listen_addresses = 'localhost'
+port = 31337
+socket_dir = '/tmp'
+listen_backlog_multiplier = 2
+pcp_listen_addresses = 'localhost'
+pcp_port = 9898
+pcp_socket_dir = '/tmp'
+backend_hostname0 = 'chef-backend.donatas.net'
+backend_port0 = 5432
+enable_pool_hba = off
+pool_passwd = 'something'
+authentication_timeout = 120
+num_init_children = 32
+max_pool = 16
+child_life_time = 900
+child_max_connections = 1000
+connection_life_time = 600
+pid_file_name = '/var/run/pgpool/pgpool.pid'
+logdir = '/var/log/pgpool'
+connection_cache = on
+memory_cache_enabled = on
+memqcache_method = 'memcached'
+memqcache_memcached_host = 'chef-memcached.donatas.net'
+memqcache_memcached_port = 11211
+memqcache_total_size = 134217728
+memqcache_max_num_cache = 10000000
+memqcache_expire = 14400
+memqcache_auto_cache_invalidation = on
+memqcache_maxcache = 1048576
+memqcache_cache_block_size = 2097152
+memqcache_oiddir = '/var/log/pgpool/oiddir'
+white_memqcache_table_list = ''
+black_memqcache_table_list = ''
+```
+
 #### Bonus - frontend config
 
 ```
