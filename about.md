@@ -9,6 +9,7 @@ permalink: /about/
 * [Software Version Capability for BGP](https://datatracker.ietf.org/doc/draft-abraitis-bgp-version-capability)
 * [Link-Local Next Hop Capability for BGP](https://datatracker.ietf.org/doc/draft-white-linklocal-capability)
 * [RIPE84 meeting, 5 years of FRRouting](https://ripe84.ripe.net/archives/video/788)
+* [Google Open Source Peer Bonus](/images/gospb.jpg)
 
 ### Blog posts
 
