@@ -6,6 +6,7 @@ permalink: /about/
 
 ### Publications
 
+* [Paths Limit for Multiple Paths in BGP](https://datatracker.ietf.org/doc/html/draft-abraitis-idr-addpath-paths-limit)
 * [Software Version Capability for BGP](https://datatracker.ietf.org/doc/draft-abraitis-bgp-version-capability)
 * [Link-Local Next Hop Capability for BGP](https://datatracker.ietf.org/doc/draft-white-linklocal-capability)
 * [RIPE84 meeting, 5 years of FRRouting](https://ripe84.ripe.net/archives/video/788)
