@@ -27,7 +27,7 @@ permalink: /about/
 
 Maintainer @ [FRRouting][frrouting]
 
-Contributed to various others projects like tcpdump, Wireshark, GoBGP, Nebula, Batfish, ProxySQL, Twemproxy, Ansible, etc.
+Contributed to various others projects like tcpdump, Wireshark, GoBGP, ExaBGP, Nebula, Batfish, ProxySQL, Twemproxy, Memcached, Ansible, etc.
 
 ### Contacts
 
