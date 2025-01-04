@@ -4,7 +4,7 @@ title: Me
 permalink: /about/
 ---
 
-### Publications
+### IETF work / conferences / foobar
 
 * [Paths Limit for Multiple Paths in BGP](https://datatracker.ietf.org/doc/html/draft-abraitis-idr-addpath-paths-limit)
 * [Maximum Prefix Outbound Route Filter for BGP](https://datatracker.ietf.org/doc/html/draft-abraitis-idr-maximum-prefix-orf)
@@ -12,9 +12,6 @@ permalink: /about/
 * [Link-Local Next Hop Capability for BGP](https://datatracker.ietf.org/doc/draft-white-linklocal-capability)
 * [RIPE84 meeting, 5 years of FRRouting](https://ripe84.ripe.net/archives/video/788), [slides](/assets/53-5-years-of-FRRouting-1.pdf)
 * [Google Open Source Peer Bonus](/images/gospb.jpg)
-
-### Blog posts
-
 * [MySQL Setup at Hostinger Explained](https://percona.community/blog/2018/12/11/mysql-setup-hostinger-explained)
 * [IPv6 as a metadata store](https://blog.apnic.net/2017/05/29/ipv6-metadata-store)
 * [Network Validation, Part 1](https://blog.apnic.net/2021/12/13/how-to-employing-network-validation)
@@ -29,6 +26,10 @@ permalink: /about/
 Maintainer @ [FRRouting][frrouting]
 
 Contributed to various others projects like tcpdump, Wireshark, GoBGP, ExaBGP, Nebula, Batfish, ProxySQL, Twemproxy, Memcached, Ansible, etc.
+
+### Baltic NOG
+
+Board member of the Baltic Network Operators Group (NOG), https://balticnog.org.
 
 ### Contacts
 
