@@ -34,8 +34,8 @@ Contributed to various others projects like tcpdump, Wireshark, GoBGP, ExaBGP, N
 
 Find me on:
 * [Github][github]
-* [Twitter][Twitter]
 * [Linkedin][linkedin]
+* donatas dot abraitis at gmail
 
 [github]: https://github.com/ton31337
 [twitter]: https://twitter.com/abradona
