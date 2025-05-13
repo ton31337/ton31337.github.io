@@ -20,6 +20,7 @@ permalink: /about/
 * [Monitoring socket queues with Sysdig](https://sysdig.com/blog/monitoring-memcached-and-socket-queues-with-sysdig)
 * [Save some bandwidth by turning off TCP Timestamps](http://highscalability.com/blog/2015/10/14/save-some-bandwidth-by-turning-off-tcp-timestamps.html)
 * [Building High Scalable V6 Only Cloud Hosting](https://www.hostinger.com/blog/awex-ipv6)
+* [CVE-2024-55553](https://nvd.nist.gov/vuln/detail/CVE-2024-55553)
 
 ### F/OSS
 
