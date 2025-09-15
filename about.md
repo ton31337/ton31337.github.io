@@ -11,6 +11,7 @@ permalink: /about/
 * [Software Version Capability for BGP](https://datatracker.ietf.org/doc/draft-abraitis-bgp-version-capability)
 * [Link-Local Next Hop Capability for BGP](https://datatracker.ietf.org/doc/html/draft-ietf-idr-linklocal-capability)
 * [RIPE84 meeting, 5 years of FRRouting](https://ripe84.ripe.net/archives/video/788), [slides](/assets/53-5-years-of-FRRouting-1.pdf)
+* [NONOG-7, FRRouting: BGP Features You Haven’t Used (= Heard), Yet?](https://www.youtube.com/watch?v=Cr64057SoOM), [slides](/assets/NONOG-7-FRRouting.pdf)
 * [Google Open Source Peer Bonus](/images/gospb.jpg)
 * [MySQL Setup at Hostinger Explained](https://percona.community/blog/2018/12/11/mysql-setup-hostinger-explained)
 * [IPv6 as a metadata store](https://blog.apnic.net/2017/05/29/ipv6-metadata-store)
