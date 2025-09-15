@@ -5,7 +5,7 @@ categories:
 - blog
 ---
 
-In my [previous lighting blog post](https://blog.donatas.net/blog/2018/01/24/exabgp-ipv6-prefix/), I described how it’s possible to null route the whole datacenter by having _fat-finger_ syndrome.
+In my [previous lighting blog post](https://donatas.net/blog/2018/01/24/exabgp-ipv6-prefix/), I described how it’s possible to null route the whole datacenter by having _fat-finger_ syndrome.
 
 This is a second example of how to melt down your network by just mistyping a single character. Imagine what happens when you type:
 

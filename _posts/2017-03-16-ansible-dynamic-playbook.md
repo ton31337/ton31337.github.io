@@ -5,7 +5,7 @@ categories:
 - blog
 ---
 
-Previous month I [wrote](http://blog.donatas.net/blog/2017/02/02/ansible-converge-time/) how we reduced converge time to 1h for the whole infrastructure. Today I can say, it's way too much to wait for changes. We wanted to see changes faster than waiting an hour or sometimes unpredictable amount of time.
+Previous month I [wrote](http://donatas.net/blog/2017/02/02/ansible-converge-time/) how we reduced converge time to 1h for the whole infrastructure. Today I can say, it's way too much to wait for changes. We wanted to see changes faster than waiting an hour or sometimes unpredictable amount of time.
 
 Day by day run list is getting fatter, thus the challenge was to keep this task as simple as possible and do not introduce any complex layer underneath. We made a resolution (raising eyebrow) to involve simple versioning mechanism for roles.
 

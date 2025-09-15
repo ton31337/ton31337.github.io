@@ -5,7 +5,7 @@ categories:
 - blog
 ---
 
-Few [days](http://blog.donatas.net/blog/2017/03/30/whd-2017/) ago I've heard about [Intel Optane](http://www.intel.de/content/www/de/de/architecture-and-technology/intel-optane-technology.html) technology. This is gonna be a good step for hosting providers to provide more resources for the competitive price.
+Few [days](http://donatas.net/blog/2017/03/30/whd-2017/) ago I've heard about [Intel Optane](http://www.intel.de/content/www/de/de/architecture-and-technology/intel-optane-technology.html) technology. This is gonna be a good step for hosting providers to provide more resources for the competitive price.
 
 What is tough, that this solution does not require any breaking changes from user-space applications, it just uses the same paging as with regular memory. With current 4-level paging, you have a limit for physical memory up to 64TB. If the market will keep the pace for these devices as with HDDs then you should guess what would happen. Even [DDR5](https://arstechnica.com/gadgets/2017/03/next-generation-ddr5-ram-will-double-the-speed-of-ddr4-in-2018/) is hitting the market. Eventually, this will hit this limit. But.. Linux community is already working on 5-level paging, which will be able to do paging up to 4PB of physical memory.
 

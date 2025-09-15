@@ -15,7 +15,7 @@ Hence, implementation is trivial, just define minimum TTL and expect to see inco
 
 For instance, let's listen on custom TCP port with `IP_TTL` socket option applied with the value of 1. This means - reject packets with TTL value higher than 1. This is almost the same as an internal network - one hop away. If you operate on leaf-and-spine topology then it works perfectly.
 
-One more real use case would be like I wrote [before](http://blog.donatas.net/blog/2017/04/20/http-request-validation/) when you have a proxy layer and backend layer and want to deny all non-proxied requests then set `IP_TTL` on backend sockets.
+One more real use case would be like I wrote [before](http://donatas.net/blog/2017/04/20/http-request-validation/) when you have a proxy layer and backend layer and want to deny all non-proxied requests then set `IP_TTL` on backend sockets.
 
 #### Proof of concept
 

@@ -11,7 +11,7 @@ So if you have two or more IPs per record, DNS server will respond in a round-ro
 
 Typically TTL is set to one hour or so. Some resolvers override source TTL to cache DNS responses longer. If you use DNS as a balancing layer then small TTL must be used, like 30 seconds.
 
-This could be improved by using [circuit breaker](https://blog.donatas.net/blog/2017/03/01/powerdns-pipebackend/) between the server and the client.
+This could be improved by using [circuit breaker](https://donatas.net/blog/2017/03/01/powerdns-pipebackend/) between the server and the client.
 
 A further step to achieve more granular stickiness would be to use GeoDNS service e.g.: PowerDNS. It has full support for [MaxMind legacy GeoIP](https://dev.maxmind.com/geoip/legacy/downloadable/) and [GeoIP2](https://dev.maxmind.com/geoip/geoip2/downloadable/). It could return address by country, city, continent. Just keep in mind that GeoIP _dat_ format is not maintained anymore. Consider using _mmdb_ format. PowerDNS looks up what to return by source IP of the resolver or EDNS - if forwarded.
 

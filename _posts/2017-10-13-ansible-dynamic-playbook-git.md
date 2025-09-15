@@ -5,7 +5,7 @@ categories:
 - blog
 ---
 
-In previous [post](http://blog.donatas.net/blog/2017/03/16/ansible-dynamic-playbook/) I described how [we](https://www.hostinger.com/) use Ansible in production environments for much faster deployments than coping with defaults. In this blog post, I will explain another one (simplified version) way to deal with incremental changes.
+In previous [post](http://donatas.net/blog/2017/03/16/ansible-dynamic-playbook/) I described how [we](https://www.hostinger.com/) use Ansible in production environments for much faster deployments than coping with defaults. In this blog post, I will explain another one (simplified version) way to deal with incremental changes.
 
 I borrowed the idea from [git-stacktrace](https://github.com/pinterest/git-stacktrace). The idea is just to looks for the changed files with the latest commit and generate playbook file dynamically.
 

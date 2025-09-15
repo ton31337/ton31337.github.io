@@ -11,7 +11,7 @@ IPv6 doesn't have allocated /64 or so for loopback - it's as simple as it should
 
 >Allocating a /32 prefix for the loopback function may seem excessive, as a /48 length prefix would satisfy the larger loopback prefix requirements. However, within the parent 0000::/8 special purpose prefix, there are approximately 16 million /32 prefixes, so a single /32 for the larger loopback prefix is easily afforded. A /32 larger loopback prefix will satisfy all current and likely future uses of the loopback function.
 
-As a result `1::1/64` is proposed as the best candidate because it's quite easy for humans to remember. And /64 is for EUI-64, just don't break the internet. Also, this should lie down under loopback handling properly as I described in my previous [post](http://blog.donatas.net/blog/2017/04/25/ipv6-loopback/).
+As a result `1::1/64` is proposed as the best candidate because it's quite easy for humans to remember. And /64 is for EUI-64, just don't break the internet. Also, this should lie down under loopback handling properly as I described in my previous [post](http://donatas.net/blog/2017/04/25/ipv6-loopback/).
 
 If you didn't know, you can ping any address from `127.0.0.0/8` range:
 
