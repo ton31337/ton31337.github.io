@@ -8,7 +8,9 @@ permalink: /about/
 
 #### IETF
 
-A member of [bgpdir](https://datatracker.ietf.org/group/bgpdir/about).
+A member of [BGP Directorate](https://datatracker.ietf.org/group/bgpdir/about) @ IETF.
+
+##### Contributions
 
 * [Paths Limit for Multiple Paths in BGP](https://datatracker.ietf.org/doc/html/draft-abraitis-idr-addpath-paths-limit)
 * [Maximum Prefix Outbound Route Filter for BGP](https://datatracker.ietf.org/doc/html/draft-abraitis-idr-maximum-prefix-orf)
