@@ -16,6 +16,7 @@ A member of [BGP Directorate](https://datatracker.ietf.org/group/bgpdir/about) @
 * [Maximum Prefix Outbound Route Filter for BGP](https://datatracker.ietf.org/doc/html/draft-abraitis-idr-maximum-prefix-orf)
 * [Software Version Capability for BGP](https://datatracker.ietf.org/doc/draft-abraitis-bgp-version-capability)
 * [Link-Local Next Hop Capability for BGP](https://datatracker.ietf.org/doc/html/draft-ietf-idr-linklocal-capability)
+* [Maximum Number of Paths Reached Notification for BGP](https://datatracker.ietf.org/doc/html/draft-abraitis-idr-maximum-paths-subcode)
 
 ##### Other IETF contributions
 
