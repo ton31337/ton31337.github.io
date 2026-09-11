@@ -28,6 +28,7 @@ A member of [BGP Directorate](https://datatracker.ietf.org/group/bgpdir/about) @
 * [RIPE84 meeting, 5 years of FRRouting](https://ripe84.ripe.net/archives/video/788), [slides](/assets/53-5-years-of-FRRouting-1.pdf)
 * [NONOG-7, FRRouting: BGP Features You Haven’t Used (= Heard), Yet?](https://www.youtube.com/watch?v=Cr64057SoOM), [slides](/assets/NONOG-7-FRRouting.pdf)
 * [BalticNOG 2025, FRRouting: BGP Features You Haven’t Used (= Heard), Yet?](https://www.youtube.com/watch?v=EQ0h0FRsvH8), [slides](/assets/BalticNOG2025-FRRouting.pdf)
+* [NONOG-8, A Dietary plan for BGP](TBD), [slides](/assets/NONOG-8-Dietary-Plan-For-BGP.pdf)
 
 #### Awards
 
