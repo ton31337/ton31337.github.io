@@ -22,6 +22,7 @@ A member of [BGP Directorate](https://datatracker.ietf.org/group/bgpdir/about) @
 
 * [One Administrative Domain using BGP](https://datatracker.ietf.org/doc/html/draft-uttaro-idr-bgp-oad)
 * [BGP Next Hop Dependent Characteristics Attribute](https://datatracker.ietf.org/doc/html/draft-ietf-idr-nhc)
+* [The Key List BGP Attribute for NLRI Error handling](https://datatracker.ietf.org/doc/html/draft-decraene-idr-nlri-error-handling)
 
 #### Talks
 
