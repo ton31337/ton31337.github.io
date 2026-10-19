@@ -46,6 +46,10 @@ A member of [BGP Directorate](https://datatracker.ietf.org/group/bgpdir/about) @
 * [Save some bandwidth by turning off TCP Timestamps](http://highscalability.com/blog/2015/10/14/save-some-bandwidth-by-turning-off-tcp-timestamps.html)
 * [Building High Scalable V6 Only Cloud Hosting](https://www.hostinger.com/blog/awex-ipv6)
 
+#### Patents
+
+* [US12675328B1: Kernel-level resource activation for process management](https://patents.google.com/patent/US12675328B1/en)
+
 #### CVEs
 
 * [CVE-2024-55553](https://nvd.nist.gov/vuln/detail/CVE-2024-55553)
